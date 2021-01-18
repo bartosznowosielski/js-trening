@@ -62,3 +62,71 @@ function podmianka (zmienianyObiekt, podmienionaTresc) {
 }
  podmianka('.trick--js', 'A to jest podmieniona treść. Haker 😎'); 
 
+// OBIEKTY
+
+const subaruImpreza = { // zmienna obiekt
+    brand: 'Subaru', // wlasnosc - property
+    type: 'Impreza',
+    power: 235,  
+    engine: 2500,
+    fuel: true,
+    drive: (cel) => { // metody - czyli funkcje w obiekcie
+        console.log(`Jezdze szybko do ${cel}`)
+    },
+    driver: {
+        name: 'Bartosz',
+        driverLicense: true,
+    }
+ }
+
+ console.log(subaruImpreza);
+
+ console.log(`Nazywam się ${subaruImpreza.driver.name}, a mój samochód to ${subaruImpreza.brand} model ${subaruImpreza.type}`);
+
+ subaruImpreza.drive('Sukowic'); // wywołnie metody (funkcji z obiektu)
+
+ console.log(typeof subaruImpreza.fuel); // typeof pokazuje czy to jest obiekt czy wlasnosc i jaka
+
+ // Bracket notation 
+
+ console.log(subaruImpreza['brand']); // Przykład 1. Tak tez mozna sie "dobić" do własności
+
+ const mojaMarka = 'brand';
+ 
+ console.log(subaruImpreza[mojaMarka]); // Przykład 2. A tak inaczej tez mozna 
+
+ const pokazMojaWlasnosc = (mojaWlasnosc) => { // Przykład 3. Jak to wykorzystać w praktyce
+     console.log(`Mój ${mojaWlasnosc} to ${subaruImpreza[mojaWlasnosc]}`)
+ };
+
+ pokazMojaWlasnosc('brand'); 
+ pokazMojaWlasnosc('type'); 
+ pokazMojaWlasnosc('power'); 
+
+  // FAT ARROW FUNCTION
+
+const fatArrow = (sukces) => {
+    console.log(`${sukces} jest genialny!`);
+}
+
+fatArrow(`${name}`); // inny sposób zapisu funkcji, moze troche bardziej czytelny, w przykladzie odniosles sie do zmiennej stalej z wiersza numer 1
+
+// Podstawy pod hamburger menu
+
+const button = document.querySelector('.guzik--js');
+
+console.log(button);
+
+const klikanie = () => {
+    const zmiana = document.querySelector(".podmiana--js");
+    zmiana.innerHTML = `Szok! 🤯`
+}
+
+button.addEventListener('click', klikanie);
+
+const hamburger = document.querySelector('.hamburger--js');
+
+hamburger.addEventListener('click', () => {
+    const nav = document.querySelector('.hamburger--close');
+    nav.classList.toggle('hamburger--open');
+});

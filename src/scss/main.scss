@@ -2,4 +2,10 @@
 
 @import "_variables";
 
+.hamburger--close {
+  display: none;
+}
 
+.hamburger--open {
+  display: inline;
+}
