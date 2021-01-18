@@ -26,7 +26,7 @@ W tablicy `chunks` w pliku `webpack.common.js` dopisujemy, które skrypty mają 
 `cd ~` przejście do katalogu domowego  
 `cd .` przejście katalog wyżej  
 `ls` zawartość katalogu  
-`ls -a` pokaze tez ukryte pliki
+`ls -a` pokaze tez ukryte pliki  
 `cd nazwa-katalogu` przejście do katalogu nazwa-katalogu  
 `pwd` wyświetla aktualną ścieżkę  
 `mkdir nazwa-katalogu` stworzenie katalogu nazwa-katalogu  
