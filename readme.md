@@ -33,15 +33,15 @@ W tablicy `chunks` w pliku `webpack.common.js` dopisujemy, które skrypty mają 
 `code .` otwiera visual studio code w danym katalogu  
 
 ## Komendy GIT ⌨️
-`git init` zakładanie nowego repozytorium
-`git status` sprawdza w których plikach zostały nie dodane zmiany
-`git add .` dodaje w danym katalogu zmiany 
-`git commit -m „opis zmian”` dodaje commit
-`gitk` podgląd commitów
-`git push` wrzuca zmiany do GitHub
-`git branch` sprawdza na jakim branchu jesteśmy
-`git branch nowy-branch` tworzy nowy branch
-`git checkout nazwa-brancha` przerzuca na inny branch
-`git merge nazwa-brancha` łączy nam branche
+`git init` zakładanie nowego repozytorium  
+`git status` sprawdza w których plikach zostały nie dodane zmiany  
+`git add .` dodaje w danym katalogu zmiany   
+`git commit -m „opis zmian”` dodaje commit  
+`gitk` podgląd commitów  
+`git push` wrzuca zmiany do GitHub  
+`git branch` sprawdza na jakim branchu jesteśmy  
+`git branch nowy-branch` tworzy nowy branch  
+`git checkout nazwa-brancha` przerzuca na inny branch  
+`git merge nazwa-brancha` łączy nam branche  
 
 
