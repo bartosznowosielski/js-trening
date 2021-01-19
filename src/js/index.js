@@ -171,3 +171,72 @@ console.log(tablicaTrening);
 // tutaj mozesz sobie wybrac fragment starej tablicy zaczyna od numeru indeksu włącznie i kończy na podanej wartości, ale ju jej nie dołącza
 const nowaTablica = tablicaTrening.slice(1,3);
 console.log(nowaTablica); // tu nie działa bo ją poszatkowałeś splicem
+
+// PĘTLE (LOOPS)
+
+//Pętla for
+for (let i = 0; i < 4; i++) {
+    console.log('Witamy pętle');
+    console.log(`Powitanie numer ${i}`)
+}
+
+// i++ postinkrementacja 
+let exNumber = 4;
+console.log(exNumber++);
+console.log(exNumber); 
+
+// i-- postdekrementacja
+let exNumber2 = 4;
+console.log(exNumber2--);
+console.log(exNumber2); 
+
+// ++i preinkrementacja
+let exNumber3 = 4;
+console.log(++exNumber3);
+console.log(exNumber3);
+
+// -i predekrementacja
+let exNumber4 = 4;
+console.log(--exNumber4);
+console.log(exNumber4);
+
+const tablicaOwoce = ['🍎','🍌','🍍','🍒','🍉'];
+
+for (let i=1; i < tablicaOwoce.length; i++) {
+    console.log(`Owoc pod indeksem ${i} jest ${tablicaOwoce[i]}`)
+}
+
+// Petla while
+let whileNumber = 0;
+
+while (whileNumber < 10){
+    console.log(whileNumber);
+    whileNumber++;
+}
+
+// Petla do while
+let doWhileNumber = 20;
+
+do {
+    console.log(doWhileNumber);
+    doWhileNumber = doWhileNumber - 5;
+} while (doWhileNumber > 0);
+console.log(doWhileNumber);
+
+// Pętla for in 
+const home = {
+    typ: 'apartament',
+    pokoje: 5,
+    powierzchnia: 150,
+    miejsce: 'Teneryfa'
+}
+
+for (let newHome in home) {
+    console.log(`${newHome}: ${home[newHome]}`);
+}
+ // Pętla for of
+const elements = ['😎','🤓','🤩','🥳'];
+
+for(let element of elements) {
+    console.log(element);
+}
