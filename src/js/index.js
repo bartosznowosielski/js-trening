@@ -128,5 +128,46 @@ const hamburger = document.querySelector('.hamburger--js');
 
 hamburger.addEventListener('click', () => {
     const nav = document.querySelector('.hamburger--close');
-    nav.classList.toggle('hamburger--open');
+    nav.classList.toggle('hamburger--open'); // obie klasy są w css 
 });
+
+// TABLICE (ARRAYS)
+
+const tablicaTrening = ['🌶', '🌭', '🍅', '🥑'];
+console.log(tablicaTrening);
+console.log(tablicaTrening[3]); // liczy pozycje od 0
+console.log(tablicaTrening.length); // liczy liczbe elementów w tablicy
+
+const testowyString = 'Bartosz';
+console.log(testowyString[3]);
+console.log(testowyString.length); // stringi zachowują się podobnie do tablic
+
+tablicaTrening.push(testowyString); // dodaje element do tablicy na koniec
+tablicaTrening.unshift('TOP💪'); // dodaje element do tablicy na początek
+console.log(tablicaTrening);
+tablicaTrening.shift(); // usuwa pierwszy element
+tablicaTrening.pop(); // usuwa ostatni element
+console.log(tablicaTrening);
+
+console.log(tablicaTrening.indexOf('🍅')); // wyszuka i jeśli znajdzie poda nam pozycje w tablicy
+
+// pamiętaj, ze indexOf zwraca wartość od 0 do anie true false, jak nie znajdzie elementu wypisuje -1 dlatego jest >= 0
+
+if (tablicaTrening.indexOf('🌶') >= 0) {
+    console.log('Mam te emoji')
+} else {
+    console.log('Nie mam tego emoji')
+};
+
+if (tablicaTrening.indexOf('🌽') >= 0) {
+    console.log('Mam te emoji')
+} else {
+    console.log('Nie mam tego emoji')
+};
+
+tablicaTrening.splice(1,2); // funkcja splice usuwa od wybranej pozycji wybrana ilosc elementow
+console.log(tablicaTrening); 
+
+// tutaj mozesz sobie wybrac fragment starej tablicy zaczyna od numeru indeksu włącznie i kończy na podanej wartości, ale ju jej nie dołącza
+const nowaTablica = tablicaTrening.slice(1,3);
+console.log(nowaTablica); // tu nie działa bo ją poszatkowałeś splicem
