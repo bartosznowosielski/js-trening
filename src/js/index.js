@@ -240,3 +240,39 @@ const elements = ['😎','🤓','🤩','🥳'];
 for(let element of elements) {
     console.log(element);
 }
+
+//PRZECHOWYWANIE DANYCH
+
+//cookies
+document.cookie = 'names = Bartek&Sabina;'
+
+//local storage
+localStorage.setItem('person', 'Banan 🍌')
+
+console.log(localStorage.getItem('person'));
+
+localStorage.setItem('wpis', JSON.stringify({imie: 'Janek 🤓', nazwisko: 'Kowalski', wiek: 32})); // JSON.stringify zapisuje objekt jako string
+
+const czaryMary = localStorage.getItem('wpis');
+
+console.log(JSON.parse(czaryMary)); //JSON.parse zamieni string na obiekt
+
+// aplikacja zapisujaca do local storage z inputa, której nie rozumiesz...
+
+const enter = localStorage.getItem('enter');
+let result = '';
+
+if (enter) {
+    console.log(`Wartość podana przez gościa: ${enter}`);
+    result = enter;
+}
+
+const enterInput = document.querySelector('.enter--js');
+enterInput.value = result;
+
+const guzikZapisz = document.querySelector('.save--js');
+console.log(guzikZapisz);
+
+guzikZapisz.addEventListener('click', () => {
+    localStorage.setItem('enter', enterInput.value);
+});
