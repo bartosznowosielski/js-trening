@@ -31,8 +31,10 @@
   border-radius: 50%;
 }
 
+$fajnyzielony: yellowgreen;
+
 .bgc--change:hover {
-  background-color: green;
+  background-color: $fajnyzielony;
 }
 
 .highlight--focus:focus {
@@ -41,4 +43,43 @@
 //są tez przesudoklasy first-child i last-child, ale to jakoś mi średnio siedzi. Jest jeszcze not. To jest przydatne. 
 
 //SASS
+//zmienne zastosujemy w paragrafie z hover dla przykładu, tam nad jest zdefiniowana zmienna dot. koloru tła
+
+//mixin i include
+@mixin kontenerek {
+  background-color: yellowgreen;
+  border-radius: 10px;
+}
+
+@mixin paragrafParametr ($weight, $color) {
+  font-weight: $weight;
+  color: $color;
+}
+
+.specjalnyKontener {
+  @include kontenerek;
+}
+
+.parametrSass {
+  @include paragrafParametr(bold, blue);
+}
+
+// Jest jeszcze extend, ale mi to nie siedzi 
+
+//parent selektor
+.about {
+  background-color: lightgreen;
+  border-radius: 15px;
+  padding: 15px;
+  &__paragraph {
+    color:darkslategray;
+  }
+  &__title{
+    color: darkgreen;
+    margin-top: 0px;
+    &--italian {
+      font-style: italic;
+    }
+  }
+}
 
