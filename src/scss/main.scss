@@ -2,6 +2,7 @@
 
 @import "_variables";
 
+//KLASY DO MENU W JS
 .hamburger--close {
   display: none;
 }
@@ -9,3 +10,35 @@
 .hamburger--open {
   display: inline;
 }
+
+// PSEUDOKLASY I PSEUDOELEMENTY
+.heading--dot::before {
+  content: " ";
+  display: inline-block;
+  background-color: green;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+
+.heading--dot::after {
+  content: " ";
+  display: inline-block;
+  background-color: green;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.bgc--change:hover {
+  background-color: green;
+}
+
+.highlight--focus:focus {
+  background-color: yellow;
+}
+//są tez przesudoklasy first-child i last-child, ale to jakoś mi średnio siedzi. Jest jeszcze not. To jest przydatne. 
+
+//SASS
+
