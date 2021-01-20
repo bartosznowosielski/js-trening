@@ -2,6 +2,18 @@
 
 @import "_variables";
 
+//poniezej masz zmienne i wykorzystujesz dla body, a później zrobisz darkmode w js
+:root {
+  --mainColor: darkgreen;
+  --mainBgc: lightgrey;
+}
+
+body {
+  background-color: var(--mainBgc);
+  color: var(--mainColor);
+  font-family: sans-serif;
+}
+
 //KLASY DO MENU W JS
 .hamburger--close {
   display: none;
@@ -82,4 +94,3 @@ $fajnyzielony: yellowgreen;
     }
   }
 }
-

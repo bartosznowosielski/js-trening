@@ -292,3 +292,21 @@ localStorage.setItem('Data wejścia', data); //dodałeś wpis do local storage w
 
 const godzina = moment().calendar(); 
 localStorage.setItem('Godzina', godzina);
+
+//DARK MODE
+
+let isDark = false;
+
+const switchMode = document.querySelector('.darkMode--js');
+
+switchMode.addEventListener('click', () =>{
+    if (isDark) {
+        document.documentElement.style.setProperty('--mainColor','darkgreen');
+        document.documentElement.style.setProperty('--mainBgc','lightgrey');
+        isDark = false;
+    } else {
+        document.documentElement.style.setProperty('--mainColor','lightgrey');
+        document.documentElement.style.setProperty('--mainBgc','darkslategrey');
+        isDark = true;
+    }
+})
