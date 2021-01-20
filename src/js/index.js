@@ -1,5 +1,7 @@
 import '../scss/main.scss';
 
+import moment from 'moment'; // importujemy moduł z node moment
+
 //PODSTAWY
 
 const name = 'Bartek'; // to jest komentarz jednoliniowy - to jest string czyli tekst w ''
@@ -276,3 +278,17 @@ console.log(guzikZapisz);
 guzikZapisz.addEventListener('click', () => {
     localStorage.setItem('enter', enterInput.value);
 });
+
+// Biblioteka moment
+
+const data = moment().format('LL');
+console.log(data);
+
+const wypiszDate = document.querySelector('.data--js');
+wypiszDate.innerHTML = data;
+
+//Biblioteka moment + local storage
+localStorage.setItem('Data wejścia', data); //dodałeś wpis do local storage w ktorym jest wpisana data wejscia
+
+const godzina = moment().calendar(); 
+localStorage.setItem('Godzina', godzina);
